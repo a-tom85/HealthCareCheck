@@ -1,0 +1,2 @@
+# getSlackUserID
+SlackAPIを用いてワークスペース内の全ユーザーのUserIDを取得し、指定したスプレッドシートに書き出す。

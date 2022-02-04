@@ -1,7 +1,12 @@
 function getSlackUser() {
   
-  //Bot User OAuth Tokenを入力する
+  //必要に応じて書き換える変数
+  //Bot User OAuth Token
   const slack_app_token = "xoxb-"; 
+  //スプシのURL
+  const SHEET_URL = "https://docs.google.com/spreadsheets/d/";
+  //スプレッドシートの中の書き込みたいシート名
+  const SHEET_NAME = "slackID";　
 
   //おまじない部分
   const options = {
@@ -28,11 +33,6 @@ function getSlackUser() {
   }
   
   //スプレッドシートに書き込み
-    //スプレッドシートのURLを入力する
-  const SHEET_URL = "https://docs.google.com/spreadsheets/d/"; 
-    //スプレッドシートの中の書き込みたいシート名を入力する(ex:slackID)
-  const SHEET_NAME = "slackID";　
-
   var spreadSheet = SpreadsheetApp.openByUrl(SHEET_URL);
   const sheet = spreadSheet.getSheetByName(SHEET_NAME);
 
